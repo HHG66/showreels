@@ -1,11 +1,13 @@
 <script setup>
-import Login from './views/Login.vue';
-
-
 </script>
 
 <template>
-<Login></Login>
+  <!-- <router-link to="/about">demo1</router-link>
+  <router-link to="/index">demo2</router-link> -->
+  <div>
+  </div>
+  <RouterView />
+
 </template>
 
 <style scoped>
