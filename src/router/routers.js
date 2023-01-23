@@ -1,7 +1,7 @@
 /*
  * @Author: HHG
  * @Date: 2023-01-22 13:26:04
- * @LastEditTime: 2023-01-23 15:01:24
+ * @LastEditTime: 2023-01-23 22:29:59
  * @LastEditors: 韩宏广
  * @FilePath: /showreel/src/router/routers.js
  * @文件说明: 
@@ -9,10 +9,12 @@
 
 import Login from '@/views/behind/Login.vue'
 import Layout from '@/layouts/index.vue'
-import About from '@/views/behind/About/index.vue'
+import Home from '@/views/front/Home/index.vue'
+import Portfolio from '@/views/behind/Portfolio/index.vue'
 import { behindBasePath } from './roter.config'
-const Nav1 = { template: '<div>Nav1</div>' }
-const Nav2 = { template: '<div>Nav2</div>' }
+// import About from '@/views/behind/About/index.vue'
+// const Nav1 = { template: '<div>Nav1</div>' }
+// const Nav2 = { template: '<div>Nav2</div>' }
 const behindRoutes = [
   { path: '/', redirect: '/login' },
   {
@@ -20,56 +22,83 @@ const behindRoutes = [
     name: 'login',
     component: Login,
     meta: {
+      ChName: '登录'
     },
   },
   {
-    path: behindBasePath + '/about',
-    name: 'about',
+    path: behindBasePath + '/home',
+    name: 'home',
     component: Layout,
-    redirect: behindBasePath + 'about/index',
+    redirect: behindBasePath + '/home/index',
     children: [
       {
         path: 'index',
-        // component: About,
-        name: 'about',
-        component: () => import('@/views/behind/About/index.vue')
-      }
-    ]
-  },
-  {
-    path: behindBasePath + '/nav1',
-    name: 'nav1',
-    component: Layout,
-    redirect: behindBasePath + 'nav1/index',
-    children: [
-      {
-        path: 'index',
-        name: 'nav/index',
-        // component: () => import('@/views/behind/About/index.vue')
-        component: Nav1,
+        name: 'home1',
+        // component: () => import('@/views/behind/Home/index.vue'),
+        component: () => import('@/views/behind/Home/index.vue'),
         meta: {
-
+          ChName: '后台首页'
         }
       }
     ]
   },
   {
-    path: behindBasePath + '/nav2',
-    name: 'nav2',
+    path: behindBasePath + '/portfolio',
+    name: 'portfolio',
     component: Layout,
-    redirect: '/nav2/index',
+    redirect: behindBasePath + '/portfolio/manage',
     children: [
       {
-        path: behindBasePath + '/nav2/index',
-        name: 'nav2/index',
+        path: behindBasePath + '/portfolio/manage',
+        name: 'portfolio/manage',
         // component: () => import('@/views/behind/About/index.vue')
-        component: Nav2
+        component: Portfolio,
+        meta: {
+          ChName: '作品集管理'
+        }
+      }
+    ]
+  },
+  {
+    path: behindBasePath + '/about',
+    name: 'about',
+    component: Layout,
+    redirect: behindBasePath + '/about/index',
+    children: [
+      {
+        path: 'index',
+        // component: About,
+        name: 'about1',
+        component: () => import('@/views/behind/About/index.vue'),
+        meta: {
+          ChName: '关于'
+        },
       }
     ]
   },
   // { path: '/index', component: Home },
 ]
+const frontRoutes = [
+  // { path: '/', redirect: '/login' },
+  {
+    path: '/home',
+    name: 'homes',
+    component: Home,
+    meta: {
+      ChName: '首页'
+    },
+  },
+  {
+    path: '/project',
+    name: 'project',
+    component: () => import('@/views/front/Project/index.vue'),
+    meta: {
+      ChName: '项目集'
+    },
+  }
+]
 
 export const basicRoutes = {
-  behindRoutes
+  behindRoutes,
+  frontRoutes
 }

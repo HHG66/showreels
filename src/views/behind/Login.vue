@@ -50,7 +50,7 @@ onMounted(() => {
 
 const onFinish = values => {
   console.log('Success:', values);
-  router.push('/about')
+  router.push('/admin/home/index')
 };
 const onFinishFailed = errorInfo => {
   console.log('Failed:', errorInfo);

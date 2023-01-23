@@ -1,17 +1,24 @@
 <!--
  * @Author: HHG
  * @Date: 2023-01-22 18:58:23
- * @LastEditTime: 2023-01-22 18:59:36
+ * @LastEditTime: 2023-01-23 19:45:28
  * @LastEditors: 韩宏广
- * @FilePath: /showreel/src/layout/component/LayoutBreadcrumb.vue
+ * @FilePath: /showreel/src/layouts/component/LayoutBreadcrumb.vue
  * @文件说明: 
 -->
-<script></script>
+<script setup>
+import { onMounted} from 'vue'
+const breadcrumbList = defineProps(['breadcrumbList'])
+onMounted(()=>{
+  console.log(breadcrumbList.breadcrumbList);
+})
+</script>
 <template>
-  <a-breadcrumb style="margin: 16px 0">
-    <a-breadcrumb-item>Home</a-breadcrumb-item>
-    <a-breadcrumb-item>List</a-breadcrumb-item>
-    <a-breadcrumb-item>App</a-breadcrumb-item>
+  <a-breadcrumb v-for="item in breadcrumbList.breadcrumbList" :key="item.name" style="margin: 16px 0">
+    <!-- {{ breadcrumbList.breadcrumbList }} -->
+
+    <a-breadcrumb-item>{{ item.name }}</a-breadcrumb-item>
+
   </a-breadcrumb>
 </template>
 
