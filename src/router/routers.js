@@ -1,7 +1,7 @@
 /*
  * @Author: HHG
  * @Date: 2023-01-22 13:26:04
- * @LastEditTime: 2023-01-23 22:29:59
+ * @LastEditTime: 2023-01-24 10:10:15
  * @LastEditors: 韩宏广
  * @FilePath: /showreel/src/router/routers.js
  * @文件说明: 
@@ -10,7 +10,7 @@
 import Login from '@/views/behind/Login.vue'
 import Layout from '@/layouts/index.vue'
 import Home from '@/views/front/Home/index.vue'
-import Portfolio from '@/views/behind/Portfolio/index.vue'
+// import Portfolio from '@/views/behind/Portfolio/index.vue'
 import { behindBasePath } from './roter.config'
 // import About from '@/views/behind/About/index.vue'
 // const Nav1 = { template: '<div>Nav1</div>' }
@@ -51,8 +51,8 @@ const behindRoutes = [
       {
         path: behindBasePath + '/portfolio/manage',
         name: 'portfolio/manage',
-        // component: () => import('@/views/behind/About/index.vue')
-        component: Portfolio,
+        component: () => import('@/views/behind/Portfolio/index.vue'),
+        // component: Portfolio,
         meta: {
           ChName: '作品集管理'
         }

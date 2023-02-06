@@ -1,7 +1,7 @@
 <!--
  * @Author: HHG
  * @Date: 2023-01-22 17:28:03
- * @LastEditTime: 2023-01-23 22:05:17
+ * @LastEditTime: 2023-01-29 22:15:02
  * @LastEditors: 韩宏广
  * @FilePath: /showreel/src/layouts/index.vue
  * @文件说明: 
@@ -14,11 +14,16 @@ import LayoutHeader from './component/LayoutHeader.vue'
 import LayoutBreadcrumb from './component/LayoutBreadcrumb.vue'
 
 onMounted(() => {
-  console.log(route.meta.ChName);
+  // console.log(route.meta.ChName);
   //用于检测路由变化后更改面包屑，不够优雅，暂时这样
   router.afterEach((to, from, failure) => {
     breadcrumbList.value = [{ name: to.meta.ChName }]
   })
+  //面包屑的缓冲，取值和菜单名称相同，以后需要修改
+  if (sessionStorage.getItem("selectedKeys")) {
+    // 恢复文本输入框的内容
+    breadcrumbList.value = [{ name: sessionStorage.getItem("selectedKeys") }]
+  }
 
   //这里应该通过后端传回来路由表生成页面导航
   let rou = []

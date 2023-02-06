@@ -10,7 +10,7 @@
 import { onMounted} from 'vue'
 const breadcrumbList = defineProps(['breadcrumbList'])
 onMounted(()=>{
-  console.log(breadcrumbList.breadcrumbList);
+  // console.log(breadcrumbList.breadcrumbList);
 })
 </script>
 <template>
