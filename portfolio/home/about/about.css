@@ -1,0 +1,77 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #0F103F;
+  overflow: hidden;
+}
+
+.back-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.back1 {
+  width: 100%;
+  height: 100%;
+  background:url(./BGSmallCircle.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 34%;
+  left: 25%;
+  filter: drop-shadow(2000px 0 #2954A3);
+  transform: translateX(-100%);
+}
+
+.back2 {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, #2954A3, #C961DE);
+  box-shadow: 10px 10px 100px #2954A3;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+}
+.back3{
+  width: 100%;
+  height: 100%;
+  background: url(./Illustration.png);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  position: absolute;
+  top: 43%;
+  left: 55%;
+  filter: drop-shadow(0 0 #2954A3);
+}
+.back4{
+  width: 100%;
+  height: 100%;
+  background: url(./programmer.svg);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  position: absolute;
+  top: 33%;
+  left: 20%;
+  filter: drop-shadow(0 0 #2954A3);
+}
+.contend-box{
+  position: absolute;
+  top: 16%;
+  left: 44%;
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+ 

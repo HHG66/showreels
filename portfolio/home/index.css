@@ -9,8 +9,9 @@ body {
   width: 100%;
   height: 100%;
   background-color: #0F103F;
-  overflow: hidden;
-
+  overflow: auto;
+  overflow-x: hidden;
+  
 }
 
 .header {
@@ -18,7 +19,7 @@ body {
   width: 80%;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 45px;
   position: relative;
 }
@@ -47,7 +48,7 @@ body {
 .txt-box {
   position: absolute;
   left: 12%;
-  top: 18%;
+  top: 35%;
   color: white;
   font-family: cursive;
   z-index: 10;
@@ -58,36 +59,16 @@ body {
   margin: 8px;
 }
 
-.img-1 {
-  background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 60%);
-  background-position: 0 0, 10% 35px;
-  background-repeat: no-repeat;
-  background-size: 600px;
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  bottom: -50px;
-  right: -50px;
-}
 
-.img-2 {
-  background-image: url(./img2.png);
-  background-size: 200px;
-  background-repeat: no-repeat;
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  top: -50px;
-  left: 0px;
-}
-.btn-box{
+.btn-box {
   text-align: center;
   margin-top: 50px;
 }
+
 .btn {
   border: none;
-  line-height: 40px;
-  height: 40px;
+  line-height: 50px;
+  height: 50px;
   width: 160px;
   border-radius: 40px;
   color: white;
@@ -96,8 +77,86 @@ body {
 .btn-1 {
   background: rgb(255, 255, 255, 0.3);
   margin-right: 20px;
+  font-weight: bold;
 }
 
 .btn-2 {
-  background: linear-gradient(135deg, rgb(201, 97, 222) 34%, rgb(41, 84, 163) 70%)
+  background: linear-gradient(135deg, rgb(201, 97, 222) 34%, rgb(41, 84, 163) 70%);
+  font-weight: bold;
+}
+
+
+
+/* 超小屏幕 */
+@media screen and (max-width: 576px) {
+  .main {
+    width: 100%;
+  }
+
+  .img-1 {
+    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
+    background-position: 0 0, 10% -40px;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    bottom: -25%;
+    right: -50px;
+  }
+
+  .img-2 {
+    background-image: url(./img2.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+}
+
+/* 小屏幕 */
+@media screen and (min-width: 768px) {
+  .main {
+    width: 768px;
+  }
+}
+
+/* 中等屏幕 */
+@media screen and (min-width: 992px) {
+  .main {
+    width: 992px;
+  }
+}
+
+/* 大屏幕 */
+@media screen and (min-width: 1400px) {
+  .main {
+    width: 100%;
+  }
+
+  .img-1 {
+    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
+    background-position: 0 0, 10% -40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    bottom: -25%;
+    right: -50px;
+  }
+
+  .img-2 {
+    background-image: url(./img2.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
 }
