@@ -11,7 +11,7 @@ body {
   background-color: #0F103F;
   overflow: auto;
   overflow-x: hidden;
-  
+
 }
 
 .header {
@@ -43,12 +43,29 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  float: left;
+}
+
+.img-box1 {
+  width: 43%;
+  height: 70%;
+  position: relative;
+  /* float: right; */
+}
+
+.img-box2 {
+  width: 41%;
+  height: 60%;
+  position: relative;
+  /* float: right; */
+  left: 0%;
+  top: -4%;
 }
 
 .txt-box {
   position: absolute;
-  left: 12%;
-  top: 35%;
+  left: 18%;
+  top: 36%;
   color: white;
   font-family: cursive;
   z-index: 10;
@@ -97,7 +114,7 @@ body {
     background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
     background-position: 0 0, 10% -40px;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 10%;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -142,21 +159,21 @@ body {
     background-position: 0 0, 10% -40px;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 50%;
+    width: 100%;
     height: 100%;
     position: absolute;
-    bottom: -25%;
-    right: -50px;
+    bottom: 45%;
+    left: 138%;
   }
 
   .img-2 {
     background-image: url(./img2.png);
     background-repeat: no-repeat;
-    background-size: 90%;
-    width: 20%;
+    background-size: 50%;
+    width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    left: 0px;
+    top: 0%;
+    left: 0%;
   }
 }
