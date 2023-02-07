@@ -1,3 +1,81 @@
+/* 超小屏幕 */
+@media screen and (max-width: 576px) {
+  .main {
+    width: 100%;
+  }
+
+  .img-1 {
+    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
+    background-position: 0 0, 10% -40px;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    bottom: -25%;
+    right: -50px;
+    /* transform: translateZ(-2px) scale(4); */
+  }
+
+  .img-2 {
+    background-image: url(./img2.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+}
+
+/* 小屏幕 */
+@media screen and (min-width: 768px) {
+  .main {
+    width: 768px;
+  }
+}
+
+/* 中等屏幕 */
+@media screen and (min-width: 992px) {
+  .main {
+    width: 992px;
+  }
+}
+
+/* 大屏幕 */
+@media screen and (min-width: 1400px) {
+  .main {
+    width: 100%;
+  }
+
+  .img-1 {
+    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
+    /* background-position: 0 0, 10% -40px; */
+    background-position: 0 0, 0 0px;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    bottom: 130%;
+    left: 200%;
+    z-index: 0;
+    transform: translateZ(-2px) scale(5);
+  }
+
+  .img-2 {
+    background-image: url(./img2.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    left: -26%;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -12,6 +90,9 @@ body {
   overflow: auto;
   overflow-x: hidden;
 
+  perspective: 1px;
+  transform-style: preserve-3d;
+
 }
 
 .header {
@@ -22,6 +103,7 @@ body {
   justify-content: space-evenly;
   padding-top: 45px;
   position: relative;
+  z-index: 10;
 }
 
 .head-icon-box {
@@ -47,19 +129,26 @@ body {
 }
 
 .img-box1 {
-  width: 43%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   position: relative;
   /* float: right; */
+  /* transform: translateZ(-2px) scale(4) ; */
+  /* z-index: -1; */
+  perspective: 1px;
+  transform-style: preserve-3d;
 }
 
 .img-box2 {
-  width: 41%;
+  width: 30%;
   height: 60%;
   position: relative;
   /* float: right; */
   left: 0%;
   top: -4%;
+  perspective: 1;
+  transform: translateZ(-1px) scale(3);
+
 }
 
 .txt-box {
@@ -103,77 +192,106 @@ body {
 }
 
 
-
-/* 超小屏幕 */
-@media screen and (max-width: 576px) {
-  .main {
-    width: 100%;
-  }
-
-  .img-1 {
-    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
-    background-position: 0 0, 10% -40px;
-    background-repeat: no-repeat;
-    background-size: 10%;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    bottom: -25%;
-    right: -50px;
-  }
-
-  .img-2 {
-    background-image: url(./img2.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    width: 20%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0px;
-  }
+.back-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-/* 小屏幕 */
-@media screen and (min-width: 768px) {
-  .main {
-    width: 768px;
-  }
+.back1 {
+  width: 100%;
+  height: 100%;
+  background: url(./about/BGSmallCircle.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  filter: drop-shadow(2000px 0 #2954A3);
+  transform: translateX(-100%);
 }
 
-/* 中等屏幕 */
-@media screen and (min-width: 992px) {
-  .main {
-    width: 992px;
-  }
+.back2 {
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, #2954A3, #C961DE);
+  box-shadow: 10px 10px 100px #2954A3;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  left: 30%;
 }
 
-/* 大屏幕 */
-@media screen and (min-width: 1400px) {
-  .main {
-    width: 100%;
-  }
+.back3 {
+  width: 100%;
+  height: 100%;
+  background: url(./about/Illustration.png);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  filter: drop-shadow(0 0 #2954A3);
+}
 
-  .img-1 {
-    background-image: url(./img1.png), radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
-    background-position: 0 0, 10% -40px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 45%;
-    left: 138%;
-  }
+.back4 {
+  width: 100%;
+  height: 100%;
+  background: url(./about/programmer.svg);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  position: absolute;
+  top: 33%;
+  left: 10%;
+  filter: drop-shadow(0 0 #2954A3);
+}
 
-  .img-2 {
-    background-image: url(./img2.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
+.contend-box {
+  position: absolute;
+  top: 16%;
+  left: 44%;
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* margin-top: 500px; */
+}
+
+.portfolio {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-back1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(./portfolio/BGSmallCircle1.png);
+  background-repeat: no-repeat;
+  background-size: 58%;
+  filter: drop-shadow(1300px 0 #2954A3);
+  position: absolute;
+  top: 15%;
+  left: -65%;
+
+}
+
+.portfolio-back2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(./portfolio/BGSmallCircle2.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1850px 0 #2954A3);
+  position: absolute;
+  top: 0%;
+  left: -120%;
 }
