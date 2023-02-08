@@ -56,11 +56,11 @@
     background-repeat: no-repeat;
     background-size: 65%;
     width: 100%;
-    height: 120%;
+    height: 110%;
     position: absolute;
     bottom: 130%;
     left: 200%;
-    z-index: 0;
+    z-index: -1;
     transform: translateZ(-2px) scale(5);
   }
 
@@ -82,7 +82,9 @@ body {
   width: 100%;
   margin: 0;
 }
-
+a{
+  color: aliceblue;
+}
 .main {
   width: 100%;
   height: 100%;
@@ -193,10 +195,13 @@ body {
 
 
 .back-box {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  width: 1400px;
+  height: 1000px;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .back1 {
@@ -204,10 +209,10 @@ body {
   height: 100%;
   background: url(./about/BGSmallCircle.png);
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 70%;
   position: absolute;
   top: 40%;
-  left: -10%;
+  left: -27%;
   filter: drop-shadow(2000px 0 #2954A3);
   transform: translateX(-100%);
 }
@@ -229,7 +234,7 @@ body {
   height: 100%;
   background: url(./about/Illustration.png);
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 25%;
   position: absolute;
   top: 50%;
   left: 60%;
@@ -241,7 +246,7 @@ body {
   height: 100%;
   background: url(./about/programmer.svg);
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 35%;
   position: absolute;
   top: 33%;
   left: 10%;
@@ -265,10 +270,11 @@ body {
 }
 
 .portfolio {
-  width: 100%;
-  height: 100%;
+  width: 1400px;
+  height: 1000px;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 .portfolio-back1 {
@@ -277,11 +283,10 @@ body {
   background-image: url(./portfolio/BGSmallCircle1.png);
   background-repeat: no-repeat;
   background-size: 58%;
-  filter: drop-shadow(1300px 0 #2954A3);
+  filter: drop-shadow(1400px 0 #2954A3);
   position: absolute;
-  top: 15%;
-  left: -65%;
-
+  top: 17%;
+  left: -80%;
 }
 
 .portfolio-back2 {
@@ -291,7 +296,19 @@ body {
   background-size: 90%;
   background-repeat: no-repeat;
   filter: drop-shadow(1850px 0 #2954A3);
+  /* filter: drop-shadow(10vh 0 #2954A3); */
   position: absolute;
-  top: 0%;
-  left: -120%;
+  top: 10%;
+  left: -130%;
+
+}
+
+.portfolio-back3 {
+  z-index: 100;
+  width:50%;
+  height:50%;
+  position: absolute;
+  /* top: 10%;
+  left: -130%; */
+  background-image: radial-gradient(circle, rgb(41, 84, 163), #0F103F 55%);
 }
