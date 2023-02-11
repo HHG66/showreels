@@ -277,7 +277,7 @@ a {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  margin-top: 15%;
+  /* margin-top: 15%; */
   text-align: center;
 }
 
