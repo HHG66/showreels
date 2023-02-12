@@ -6,6 +6,7 @@
     "app-module-path": "^2.2.0",
     "koa": "^2.14.1",
     "koa-bodyparser": "^4.3.0",
+    "mongoose": "^6.9.1",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "require-directory": "^2.1.1"
   },
