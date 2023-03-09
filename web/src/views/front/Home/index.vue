@@ -1,7 +1,7 @@
 <!--
  * @Author: HHG
  * @Date: 2023-01-23 16:52:49
- * @LastEditTime: 2023-02-12 19:26:21
+ * @LastEditTime: 2023-03-09 21:16:40
  * @LastEditors: 韩宏广
  * @FilePath: /showreel/web/src/views/front/Home/index.vue
  * @文件说明: 
@@ -387,7 +387,7 @@ h1 {
   position: absolute;
   top: 17%;
   left: -80%;
-  z-index: 11;
+  z-index: -1;
 }
 
 .portfolio-back2 {
