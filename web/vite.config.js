@@ -11,6 +11,8 @@ export default defineConfig({
        vue: 'vue/dist/vue.esm-bundler.js',// 增加这一行 ， 增加动态编译的能力
        '@':process.cwd()+'/src'
     }
-  }
+  },
+  publicPath:'../'
+
 })
 

@@ -1,9 +1,9 @@
 /*
  * @Author: HHG
  * @Date: 2023-01-22 13:26:04
- * @LastEditTime: 2023-01-24 10:10:15
+ * @LastEditTime: 2023-02-13 09:25:24
  * @LastEditors: 韩宏广
- * @FilePath: /showreel/src/router/routers.js
+ * @FilePath: \showreels\web\src\router\routers.js
  * @文件说明: 
  */
 
@@ -16,7 +16,6 @@ import { behindBasePath } from './roter.config'
 // const Nav1 = { template: '<div>Nav1</div>' }
 // const Nav2 = { template: '<div>Nav2</div>' }
 const behindRoutes = [
-  { path: '/', redirect: '/login' },
   {
     path: '/login',
     name: 'login',
@@ -79,7 +78,7 @@ const behindRoutes = [
   // { path: '/index', component: Home },
 ]
 const frontRoutes = [
-  // { path: '/', redirect: '/login' },
+  { path: '/', redirect: '/home' },
   {
     path: '/home',
     name: 'homes',
